@@ -1,0 +1,11 @@
+<div class="fa fa-birthday-cake icon-background"></div>
+
+<h1 class='title' data-bind="title"></h1>
+
+<span data-bind="timeleft" class="countdown-time"></span>
+
+<p class="more-info" data-bind="end | time_to_date | prepend prefix"></p>
+<p class="end hidden" data-bind="end"></p>
+
+<p class="updated-at" data-bind="updatedAtMessage" data-hideif="communicationError"></p>
+<p class="updated-at fa fa-warning" data-showif="communicationError"> Update failed</p>
