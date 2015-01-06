@@ -6,6 +6,7 @@ Batman.Filters.time_to_date = (time) ->
 class Dashing.Birthday extends Dashing.Widget
 
   ready: ->
+    super
     setInterval(@startCountdown, 50)
 
   startCountdown: =>
