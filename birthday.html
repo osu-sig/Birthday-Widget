@@ -1,10 +1,15 @@
 <div class="fa fa-birthday-cake icon-background"></div>
 
-<h1 class='title' data-bind="title"></h1>
+<span data-showif="end">
+  <h1 class='title' data-bind="title"></h1>
+  <span data-bind="timeleft" class="countdown-time"></span>
+  <p class="more-info" data-bind="end | time_to_date | prepend prefix"></p>
+  <p class="end hidden" data-bind="end"></p>
+</span>
 
-<span data-bind="timeleft" class="countdown-time"></span>
-
-<p class="more-info" data-bind="end | time_to_date | prepend prefix"></p>
-<p class="end hidden" data-bind="end"></p>
+<span data-hideif="end">
+  <h1 class='title' data-bind-="nodatatitle | default 'Birthday Tile'"></h1>
+  <p class="more-info" data-bind="nodata | default 'No upcoming birthdays'"></p>
+</span>
 
 <p class="updated-at" data-bind-error="error" data-bind="updatedAtMessage"></p>
