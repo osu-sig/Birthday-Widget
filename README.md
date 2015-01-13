@@ -8,7 +8,7 @@ modified: 2015 Jan 12
 
 ---
 
-Fancy List
+Birthday
 =========
 
 ![alt tag](https://raw.github.com/osu-sig/Birthday-Widget/master/screenshot.png)
