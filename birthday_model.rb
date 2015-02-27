@@ -15,6 +15,8 @@ class Birthday < Base
     today = Date.today
 
     @birthdays.each do |birthday|
+      # Duplicate birthday hash to prevent STUPID SHALLOW COPYING!!!!
+      birthday = birthday.dup
       diff = birthday['date'] - today
       if diff >= 0 && diff <= @days_advanced_notice
         birthday['date'] = birthday['date'].to_time
